@@ -1,0 +1,78 @@
+/* Sticky header for Project Page */
+.page header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(79, 22, 153, 1);
+    z-index: 1000;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.projects-div {
+    display: none;
+    margin-top: 65px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projects-div.active {
+    display: flex; /* Show only active section */
+    justify-content: center;
+}
+
+.project-buttons button{
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: color 0.3s ease;
+    display: inline-block; /* Ensure button width adjusts with content */
+}
+
+.project-buttons button.active {
+    font-weight: bold;
+    border-bottom: 2px solid #5919AD; /* Underline active button */
+}
+
+.project-buttons button.active h3{
+    color: #5919AD;
+    opacity: 0.7;
+}
+
+.project-buttons button:hover {
+    cursor: pointer;
+}
+
+
+  
+.tooltip {
+    position: absolute;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 300;
+    white-space: nowrap;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.tip1{
+    left: 35%
+}
+
+.tip2{
+    left: 50%;
+}
+  
+.project-buttons button:hover .tooltip{
+    opacity: 1;
+    visibility: visible;
+}
