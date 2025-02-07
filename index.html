@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -13,7 +14,7 @@
 
 </head>
 
-  <body>
+  <body id="main-body">
 
     <header id="navbar">  
 
@@ -42,16 +43,45 @@
             </ul>
         </nav>
 
+        <!-- mobile navigation -->
+        <nav class="mobile-nav mobile-element container">
+
+          <a href="index.html" class="header-logo"><img src="./images/logo-white.png"></a>
+
+          <i class="fa-solid fa-bars white" onclick="openMenu()"></i>
+          
+        </nav> 
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-element" id="mobile-menu">
+
+      <div class="exit-menu">
+        <i class="fa-solid fa-xmark fa-xl grey white" onclick="exitMenu()"></i>
+      </div>
+
+      <a href="./index.html" class="menu-logo"><img src="./images/logo-white.png"></a>
+
+      <ul class="menu-options">
+        <li><a href="" class="white">Home</a></li>
+        <li><a href="./html/projects.html" class="white">Projects</a></li>
+        <li><a href="./html/about.html" class="white">About</a></li>
+        <li><a href="./html/connect.html" class="white">Connect</a></li>
+      </ul>
+
+    </div>
 
     <main>
 
+        <!-- hero section  -->
         <section class="hero-sec">
             <div class="container hero-content">
                 <h1 class="white" data-aos="fade-up">Hi, I’m Roshan</h1>
-                <p class="white" data-aos="fade-up" data-aos-delay="50">A creative designer and filmmaker, blending graphic design, <br>
-                    UI/UX, editing, and filmmaking to craft unique, engaging <br>
-                    experiences that tell your story.</p>
+                <p class="white" data-aos="fade-up" data-aos-delay="50">A creative designer and filmmaker, blending graphic design,
+                    UI/UX, editing, and filmmaking to craft unique, engaging
+                    experiences that tell your story.
+                </p>
+
                 <div class="hero-btn" data-aos="fade-up" data-aos-delay="100">
                     <a href="./html/projects.html" class="btn hero-p-btn">View my work</a>
                     <a href="./html/connect.html" class="btn hero-s-btn">Get in touch</a>
@@ -68,7 +98,8 @@
               <a href="./html/projects.html" data-aos="fade-left" style="margin-right: 10px;">View all</a>
             </div>
             
-            <div class="projects-div">
+            <!-- Desktop View -->
+            <div class="projects-div desktop-element">
 
               <a href="https://affilioninstitute.com/" target="_blank" data-aos="fade-up">
                 <div class="projects">
@@ -105,7 +136,47 @@
 
             </div>
 
-          </div>
+            <!-- Mobile View -->
+            <div class="mobile-element project-gallery">
+
+              <i class="fa-solid fa-chevron-left grey" onclick="mProjectSlidePlus(-1)"></i>
+
+              <a href="https://affilioninstitute.com/" target="_blank" class="m-projects">
+                <div class="projects">
+                  <img src="./images/projects/collaborations/affilion.png">
+
+                  <div class="project-desc">
+                    <h3>Affilion</h3>
+                    <p>UIUX Designer</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://youtu.be/uXDXHacBSNk?si=VLO__6aJ4y1bssOP" target="_blank" class="m-projects">
+                <div class="projects">
+                  <img src="./images/projects/explorations/city.png" alt="">
+
+                  <div class="project-desc">
+                    <h3>City Awakens</h3>
+                    <p>Documentary Film</p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://www.behance.net/gallery/163528777/Book-Munch-Visual-Identity-Design" target="_blank" class="m-projects">
+                <div class="projects">
+                  <img src="./images/projects/explorations/bookmunch brandidentity.png" alt="">
+  
+                  <div class="project-desc">
+                    <h3>Bookmunch</h3>
+                    <p>Brand Identity Design</p>
+                  </div>
+                </div>
+              </a>
+  
+              <i class="fa-solid fa-chevron-right grey" onclick="mProjectSlidePlus(1)"></i>
+
+            </div>
           
         </section>
 
@@ -114,7 +185,7 @@
 
           <div class="container about">
             
-            <div class="about-img-div">
+            <div class="about-img-div desktop-element">
                 <img src="./images/about1.png" class="about-img" data-aos="fade-right">
                 <img src="./images/about2.png" class="about-img" style="margin-top: 70px;" data-aos="fade-left">
             </div>
@@ -123,7 +194,7 @@
               <h2>
                 About me
               </h2>
-              <p data-aos-delay="200">
+              <p data-aos-delay="200" class="desktop-element">
                 I’m a passionate designer who thrives on challenging <br>
                 and pushing creative boundaries to craft impactful <br>
                 solutions that resonate and inspire. Based in <br>
@@ -132,6 +203,12 @@
                 like-minded creatives to bring meaningful visions to life. <br>
                 For me, design is not just a profession <br>
                 — it’s a journey of innovation and self-expression.
+              </p>
+
+              <img src="./images/about1.png" class="mobile-element" alt="">
+
+              <p class="text-center mobile-element">
+                I'm a passionate designer from Kathmandu, Nepal, pushing creative boundaries to craft impactful solutions. I thrive on bold ideas, collaboration, and continuous growth—design is my journey of innovation and self-expression.
               </p>
               <div style="margin-top: 20px;">
                 <a href="./html/about.html" class="btn primary-btn">Know More</a>
@@ -147,9 +224,10 @@
 
         <!-- Services -->
         <section class="services-maindiv">
+
           <h2 data-aos="fade-up">What Can I do for You</h2>
 
-          <div class="services-div">
+          <div class="containerservices-div">
 
             <div data-aos="fade-up">
               <div class="services top-left">
@@ -212,6 +290,7 @@
   </body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="./js/script.js"></script>
+  <script src="./js/index.js"></script>
   <script>
     AOS.init({
       duration: 1000,

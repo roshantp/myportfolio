@@ -6,16 +6,20 @@
     background-size: cover;
     width: 100%;
     height: 100vh;
-    padding-top: 300px;
+    display: flex;
+    align-items: center;
     margin-top: 0;
 }
 
+.hero-content{padding-top: 100px;}
+
+.hero-content p{width: 45%;}
 
 .hero-p-btn{ 
     background-color: #FFD700;
 }
 
-a.btn.hero-p-btn {
+a .btn .hero-p-btn {
     padding-top: 14px;
 }
 
@@ -67,12 +71,6 @@ a.btn.hero-p-btn {
 
 .project-txt a:hover{color: rgb(16, 16, 16);}
 
-
-section{
-    margin-top: 90px;
-}
-
-
 .services-maindiv{
     display: flex;
     flex-direction: column;
@@ -93,8 +91,8 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 510px;
-    height: 250px;
+    width: 35vw;
+    height: 35vh;
     border-radius: 8px;
 }
 
@@ -125,3 +123,72 @@ section{
 .bottom-left{background: linear-gradient(-260deg, #4F1699, #7021c5);}
 .bottom-right{background: linear-gradient(260deg, #4F1699, #7021c5);}
 
+@media (max-width: 767px){
+
+    .desktop-element{display: none;}
+
+    .hero-sec{
+        background-image: url("../images/hero.png");
+        background-position: -178vw -12vh;;
+        width: 100%;
+        height: 100vh;
+        margin-top: 0;
+    }
+
+    .hero-content{
+        padding-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .hero-content p{
+        width: 100%;
+    }
+
+    .hero-btn{
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .project-gallery{
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .about img{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .about-txt{
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .services{
+        width: 100%;
+        height: 35vh;
+    }
+
+    .services h4{font-size: 18px;}
+
+    .services p{
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+
+
+}

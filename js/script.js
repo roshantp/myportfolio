@@ -1,19 +1,19 @@
-// Select the navbar
+// // Select the navbar
 const navbar = document.getElementById('navbar');
 
-// Variables to track inactivity
+// // Variables to track inactivity
 let inactivityTimeout;
 
-// Function to show the navbar
+// // Function to show the navbar
 function showNavbar() {
-  navbar.style.opacity = '1'; // Ensure it's fully visible
-  navbar.style.transform = 'translateY(0)'; // Reset position
+   navbar.style.opacity = '1'; // Ensure it's fully visible
+   navbar.style.transform = 'translateY(0)'; // Reset position
 }
 
 // Function to hide the navbar
 function hideNavbar() {
-  navbar.style.opacity = '0'; // Make it invisible
-  navbar.style.transform = 'translateY(-100%)'; // Move it out of view
+   navbar.style.opacity = '0'; // Make it invisible
+   navbar.style.transform = 'translateY(-100%)'; // Move it out of view
 }
 
 // Function to reset the inactivity timer
@@ -51,3 +51,22 @@ window.addEventListener('touchstart', resetInactivityTimer);
 
 // Initial setup to ensure the navbar is visible on page load
 resetInactivityTimer();
+
+
+// Mobile-Tablet menu 
+function openMenu(){
+  let menu = document.getElementById("mobile-menu");
+  let body = document.getElementById("main-body");
+
+  menu.style.display = "flex";
+  body.style.overflow = "hidden";
+}
+
+
+function exitMenu(){
+  let menu = document.getElementById("mobile-menu");
+  let body = document.getElementById("main-body");
+  
+  menu.style.display = "none";
+  body.style.overflow = "auto";
+}
