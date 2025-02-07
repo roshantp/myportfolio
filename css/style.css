@@ -203,6 +203,8 @@ footer{
 }
 
 .mobile-element{display: none;}
+#mobile-menu{display:none;}
+.mobile-nav{display: none;}
 
 /* Responsive */
 /* Mobile View  */
