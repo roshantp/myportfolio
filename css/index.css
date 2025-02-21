@@ -118,6 +118,13 @@ a .btn .hero-p-btn {
     font-size: 14px;
 }
 
+.containerservices-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 .top-left{background: linear-gradient(130deg, #4F1699, #7021c5);}
 .top-right{background: linear-gradient(-130deg, #4F1699, #7021c5);}
 .bottom-left{background: linear-gradient(-260deg, #4F1699, #7021c5);}
